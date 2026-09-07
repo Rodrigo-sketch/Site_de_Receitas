@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="Models/Models.csproj" />
+  <Project Path="Repository/Repository.csproj" />
+  <Project Path="Services/Services.csproj" />
+  <Project Path="Site_de_Receitas/Site_de_Receitas.csproj" />
+</Solution>
