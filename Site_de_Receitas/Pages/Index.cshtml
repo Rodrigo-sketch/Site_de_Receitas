@@ -3,4 +3,11 @@
 @{
 }
 
-@Model.user.Email
+@if (Model.user != null)
+{
+    @Model.user.Email
+}
+else
+{
+    <p>Nenhum usuário encontrado.</p>
+}
