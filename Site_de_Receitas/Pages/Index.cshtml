@@ -1,13 +1,12 @@
 ﻿@page
 @model Site_de_Receitas.Pages.IndexModel
+
 @{
+    Layout = "_Layout";
 }
 
-@if (Model.user != null)
-{
-    @Model.user.Email
-}
-else
-{
-    <p>Nenhum usuário encontrado.</p>
+<h1>Index</h1>
+
+@foreach (var user in Model.Users) {
+    <p2>@user.Name</p2>
 }

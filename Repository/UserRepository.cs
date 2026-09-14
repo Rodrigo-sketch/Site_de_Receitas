@@ -31,11 +31,22 @@ namespace Repository
                 );
             }
 
+
             conn.Close();
 
             return users;
 
         }
+
+        public void AddUser(User user)
+        {
+            List<User> users = new List<User>();
+            users.Add(user);
+            throw new NotImplementedException();
+        }
+
         public UserRepository() { }
+
+
     }
 }
