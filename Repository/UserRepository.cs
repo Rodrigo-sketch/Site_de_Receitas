@@ -6,14 +6,14 @@ namespace Repository
 {
     public class UserRepository
     {
-        //string connString = "Server=(localdb)\\MSSQLLocalDB;Database=recipes;Trusted_Connection=True;TrustServerCertificate=Tr
-        string connString = "Server=localhost,1433;Database=Receita;User Id=sa;Password=Digo@1802;TrustServerCertificate=True;";
+        string connString = "Server=(localdb)\\MSSQLLocalDB;Database=Receita;Trusted_Connection=True;TrustServerCertificate=True;";
+        //string connString = "Server=localhost,1433;Database=Receita;User Id=sa;Password=Digo@1802;TrustServerCertificate=True;";
         public List<User> GetUsers()
         {
             List<User> users = new List<User>();
 
             SqlConnection conn = new SqlConnection(connString);
-            SqlCommand cmd = new SqlCommand("SELECT id, name, password, email FROM USERS", conn);
+            SqlCommand cmd = new SqlCommand("SELECT id, name, password, email FROM [USER];", conn);
 
             conn.Open();
 

@@ -9,7 +9,6 @@
   <ItemGroup>
     <ProjectReference Include="../Models/Models.csproj" />
     <ProjectReference Include="../Repository/Repository.csproj" />
-    <ProjectReference Include="../Site_de_Receitas/Site_de_Receitas.csproj" />
   </ItemGroup>
 
 </Project>
