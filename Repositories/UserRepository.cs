@@ -2,12 +2,12 @@
 using Microsoft.Data.SqlClient;
 using Models;
 
-namespace Repository
+namespace Repositories
 {
     public class UserRepository
     {
-        string connString = "Server=(localdb)\\MSSQLLocalDB;Database=Receita;Trusted_Connection=True;TrustServerCertificate=True;";
-        //string connString = "Server=localhost,1433;Database=Receita;User Id=sa;Password=Digo@1802;TrustServerCertificate=True;";
+        //string connString = "Server=(localdb)\\MSSQLLocalDB;Database=Receita;Trusted_Connection=True;TrustServerCertificate=True;";
+        string connString = "Server=localhost,1433;Database=Receita;User Id=sa;Password=Digo@1802;TrustServerCertificate=True;";
         public List<User> GetUsers()
         {
             List<User> users = new List<User>();

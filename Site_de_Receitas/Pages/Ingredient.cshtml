@@ -1,0 +1,17 @@
+@page
+@model Site_de_Receitas.Pages.IngredientModel
+@{
+}
+
+Hi!
+<br />
+
+
+@foreach (var ingredient in Model.ingredients)
+{
+    @ingredient.Name
+    <br />
+    @ingredient.Id
+    <br />
+    <br />
+}

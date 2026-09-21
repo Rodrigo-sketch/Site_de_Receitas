@@ -1,5 +1,5 @@
 using Services;
-using Repository;
+using Repositories;
 
 namespace Site_de_Receitas
 {
@@ -12,6 +12,9 @@ namespace Site_de_Receitas
 
             builder.Services.AddScoped<UserRepository>();
             builder.Services.AddScoped<UserService>();
+
+            builder.Services.AddScoped<IngredientRepository>();
+            builder.Services.AddScoped<IngredientsServices>();
 
             var app = builder.Build();
 
