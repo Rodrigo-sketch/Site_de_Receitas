@@ -5,7 +5,13 @@ namespace Repositories
 {
     public class IngredientRepository
     {
-        string connString = "Server=localhost,1433;Database=Receita;User Id=sa;Password=Digo@1802;TrustServerCertificate=True;";
+        private readonly string connString;
+
+        public IngredientRepository(string connString)
+        {
+            this.connString = connString
+                ?? throw new ArgumentNullException(nameof(connString));
+        }
 
         public List<Ingredient> GetIngredients()
         {

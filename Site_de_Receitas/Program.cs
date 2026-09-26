@@ -10,10 +10,13 @@ namespace Site_de_Receitas
             var builder = WebApplication.CreateBuilder(args);
             builder.Services.AddRazorPages();
 
-            builder.Services.AddScoped<UserRepository>();
+            var connString = builder.Configuration.GetConnectionString("Receita")
+                ?? throw new InvalidOperationException("ConnectionStrings:Receita não configurada.");
+
+            builder.Services.AddScoped(_ => new UserRepository(connString));
             builder.Services.AddScoped<UserService>();
 
-            builder.Services.AddScoped<IngredientRepository>();
+            builder.Services.AddScoped(_ => new IngredientRepository(connString));
             builder.Services.AddScoped<IngredientsServices>();
 
             var app = builder.Build();
